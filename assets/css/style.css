@@ -1,15 +1,12 @@
 body{
 	background-color: black;
-	background-size: 100%;
-    
-    
+	background-size: 100%;  
 }
+
 * {
 	box-sizing: border-box;
 }
-h2{
-	color: red;
-}
+
 .btn {
     /* adding spacing between each button*/
     margin: 3px;
@@ -31,7 +28,7 @@ h2{
 }
 .jumbotron .h1, .jumbotron h1 {
     text-align: center;
-    color: red;
+    color: black;
 }
 #copyright{
 	font-size: 14px;

@@ -28,9 +28,8 @@ function addNewButton(){
     return false;
     });
 }
-// Function to remove last action button
     // Doesnt work properly yet removes all of the added buttons
-    // rather than just the last
+    
 function removeLastButton(){
     $("removeGif").on("click", function(){
     actions.pop(action);
@@ -47,4 +46,6 @@ function displayGifs(){
     $.ajax({
         url: queryURL,
         method: 'GET'
+
+// I need help with from this point
     
