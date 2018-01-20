@@ -2,10 +2,11 @@ $( document ).ready(function() {
 // An array of actions, new actions will be pushed into this array;
 var actions = ["Dancing", "Jogging", "Falling", "Pushing", "Swimming", 
                "Eating", "Crying", "Winking", "Strolling", "Hopping"];
-// Creating Functions & Methods
-// Function that displays all gif buttons
+
+// Creating Functions & Methods Function that displays all gif buttons
+// erasing anything in this div id so that it doesnt duplicate the results
 function displayGifButtons(){
-    $("#gifButtonsView").empty(); // erasing anything in this div id so that it doesnt duplicate the results
+    $("#gifButtonsView").empty(); 
     for (var i = 0; i < actions.length; i++){
         var gifButton = $("<button>");
         gifButton.addClass("action");
@@ -16,11 +17,12 @@ function displayGifButtons(){
     }
 }
 // Function to add a new action button
+// added so user cannot add a blank button
 function addNewButton(){
     $("#addGif").on("click", function(){
     var action = $("#action-input").val().trim();
     if (action == ""){
-      return false; // added so user cannot add a blank button
+      return false; 
     }
     actions.push(action);
 
@@ -29,13 +31,13 @@ function addNewButton(){
     });
 }
     // Doesnt work properly yet removes all of the added buttons
-    
-function removeLastButton(){
-    $("removeGif").on("click", function(){
-    actions.pop(action);
-    displayGifButtons();
-    return false;
-    });
+    function removeLastButton(){
+      $("removeGif").on("click", function(){
+        actions.pop(action);
+        displayGifButtons();
+        return false;
+
+     });
 }
 // Function that displays all of the gifs
 function displayGifs(){
